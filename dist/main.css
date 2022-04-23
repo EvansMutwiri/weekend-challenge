@@ -1,0 +1,70 @@
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss ***!
+  \**********************************************************************************************************/
+*, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+#home {
+  height: fit-content;
+  background: url(https://images.pexels.com/photos/1437493/pexels-photo-1437493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2), no-repeat, fixed, center;
+  background-size: cover;
+}
+
+.hero-text {
+  width: 100vw;
+  padding-top: 10%;
+}
+.hero-text h1 {
+  font-weight: 800;
+  font-size: 4.5rem;
+  color: #f6b10b;
+}
+
+.features {
+  z-index: 0;
+}
+
+.card {
+  margin: auto;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.card img {
+  height: 50px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+}
+
+@media all and (max-width: 750px) {
+  .hero-text {
+    width: 100vw;
+    padding-top: 30%;
+  }
+  .hero-text h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    color: #f6b10b;
+  }
+}
+@media all and (max-width: 480px) {
+  .hero-text {
+    width: 100vw;
+    padding-top: 30%;
+  }
+  .hero-text h1 {
+    font-weight: 800;
+    font-size: 2rem;
+    color: #f6b10b;
+  }
+
+  .features {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,112 @@
+$herotext: #f6b10b;
+
+*, body {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#home {
+    height: fit-content;
+    background: url(https://images.pexels.com/photos/2530342/pexels-photo-2530342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2), no-repeat, fixed, center;
+    background-size: cover;
+}
+nav {
+    a {
+        &:hover {
+            color: $herotext !important;
+        }
+    
+        &:active {
+            color: $herotext !important;
+        }
+    }
+    input {
+        background-color: transparent !important;
+        border-radius: 0 !important;
+    }
+}
+
+
+.hero-text {
+    width: 100vw;
+    padding-top: 10%;
+
+    h1 {
+        font-weight: 800;
+        font-size: 4.5rem;
+        color: $herotext;
+    }
+}
+
+.btn {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+    border-radius: 0 !important;
+    color: white;
+    a {
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+.features {
+    z-index: 0;
+  }
+
+.card {
+    margin: auto;
+    cursor: pointer;
+    transition: 0.4s;
+    background: rgba(0, 0, 0, 0.521);
+    height: 300px;
+    line-height: 3;
+    color: white;
+    h2 {
+        font-weight: 600;
+    }
+    p {
+        font-size: 18px;
+    }
+    img {
+        height: 60px;
+    }
+  }
+  
+  .card:hover {
+    transform: scale(0.9, 0.9);
+  }
+
+  @media all and (max-width: 750px) { 
+    .hero-text {
+        width: 100vw;
+        padding-top: 30%;
+    
+        h1 {
+            font-weight: 800;
+            font-size: 3rem;
+            color: $herotext;
+        }
+    }
+   }
+  
+  @media all and (max-width: 480px) {
+    .hero-text {
+        width: 100vw;
+        padding-top: 30%;
+    
+        h1 {
+            font-weight: 800;
+            font-size: 2rem;
+            color: $herotext;
+        }
+    }
+    .features {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }
+  

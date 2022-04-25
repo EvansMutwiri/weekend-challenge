@@ -39,6 +39,13 @@ nav {
     }
 }
 
+.form-control {
+    border: none !important;
+    &:focus {
+        border-color: transparent !important;
+    }
+}
+
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
     color: $herotext;
 }
@@ -189,12 +196,19 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         h3{
             font-weight: 800;
         }
         p {
             padding: 5%;
             font-size: 18px;
+        }
+        .card-img {
+            &:hover {
+                transform: scale(1.01, 1.01);
+                transition: transform .2s ease;
+            }
         }
     }
     .mission-card {
@@ -371,10 +385,12 @@ hr {
 
     #about .about_part_2 h3 {
         font-size: 4vw !important;
+        padding: 5%;
     }
 
     #about .about_part_2 p {
         font-size: 3vw !important;
+        padding: 6%;
     }
 
     .nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {

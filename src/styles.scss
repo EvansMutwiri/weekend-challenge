@@ -1,13 +1,19 @@
 $herotext: #f6b10b;
+$fontSizeP: 1.5vw;
+$fontSizeH: 5vw;
+$fontSizeH3: 2.2vw;
 
 *,
 body {
     padding: 0;
     margin: 0;
-
     box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    padding: 0 !important;
 }
 
 #home {
@@ -33,6 +39,10 @@ nav {
     }
 }
 
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: $herotext;
+}
+
 
 .hero-text {
     width: 100vw;
@@ -40,8 +50,9 @@ nav {
 
     h1 {
         font-weight: 800;
-        font-size: 4.5rem;
+        font-size: $fontSizeH;
         color: $herotext;
+        line-height: 95%;
     }
 }
 
@@ -60,6 +71,9 @@ nav {
 
 .features {
     z-index: 0;
+    .col-12 {
+        height: 350px;
+    }
 }
 
 .card {
@@ -71,12 +85,14 @@ nav {
     line-height: 3;
     color: white;
 
-    h2 {
+    h3 {
         font-weight: 600;
     }
 
     p {
-        font-size: 18px;
+        font-size: $fontSizeP;
+        font-weight: 300;
+        color: #cccccc;
     }
 
     img {
@@ -101,6 +117,13 @@ nav {
             bottom: 4em;
             padding: 2em;
             color: white;
+            overflow: hidden;
+
+            p {
+                font-size: $fontSizeP;
+                padding: 0 15%;
+                font-weight: 300;
+            }
 
             h3 {
                 font-weight: 800;
@@ -112,6 +135,30 @@ nav {
     .about-description {
         text-align: center;
         margin: auto;
+        h3 {
+            font-weight: 600;
+            font-size: $fontSizeH3;
+        }
+        p {
+            font-size: $fontSizeP;
+            font-weight: 300;
+        }
+
+        .about-footer {
+            margin-top: 10%; 
+            padding: 20px; 
+            background-color: #f2f2f2;
+        }
+    }
+    .about_part_2 {
+        h3 {
+            font-weight: 600;
+            font-size: $fontSizeH3;
+        }
+        p {
+            font-size: $fontSizeP;
+            font-weight: 300;
+        }
     }
 
     .h-rule {
@@ -125,20 +172,7 @@ nav {
     ul {
         list-style: none;
         padding-left: 0;
-
-        li {
-            position: relative;
-            padding-left: 1.5em;
-
-            &:before {
-                content: ' ';
-                position: absolute;
-                left: 0;
-                width: 1em;
-                height: 1em;
-                background: url("/src/img/check.svg") no-repeat;
-            }
-        }
+        font-size: 18px;
     }
 }
 
@@ -149,11 +183,32 @@ nav {
     grid-gap: 1rem;
 
     .cards {
-        background-color: $herotext;
+        background: $herotext;
         color: white;
-        // padding: 1rem;
         height: 24rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3{
+            font-weight: 800;
+        }
+        p {
+            padding: 5%;
+            font-size: 18px;
+        }
     }
+    .mission-card {
+        color: black;
+        background: white;
+    }
+}
+
+.bg-basic, .btn_basic {
+    background: #f9de9b;
+}
+
+.bg_light {
+    background: #fefbf2;
 }
 
 .about__banner {
@@ -226,7 +281,23 @@ hr {
     }
 }
 
+.nav-link {
+    color: black;
+    font-weight: 800;
+    font-size: 1.2vw;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: $herotext;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: $herotext;
+}
+
 @media all and (max-width: 750px) {
+    $fontSizeP: 18px;
+    
     .hero-text {
         width: 100vw;
         padding-top: 30%;
@@ -235,6 +306,12 @@ hr {
             font-weight: 800;
             font-size: 3rem;
             color: $herotext;
+        }
+    }
+
+    .thumbnail_container {
+        .thumbnail_caption {
+            font-size: 3vw !important;
         }
     }
 }
@@ -266,8 +343,53 @@ hr {
             color: $herotext;
         }
     }
+    .thumbnail_container {
+        .thumbnail_caption {
+            font-size: 5vw !important;
+        }
+    }
 
     .features {
         flex-direction: column;
+    }
+
+    .card p {
+        font-size: 4vw !important;
+    }
+
+    #about .bio-img .bio p {
+        font-size: 4vw !important;
+    }
+
+    #about .about-description h3 {
+        font-size: 4vw !important;
+    }
+
+    #about .about-description p {
+        font-size: 3vw !important;
+    }
+
+    #about .about_part_2 h3 {
+        font-size: 4vw !important;
+    }
+
+    #about .about_part_2 p {
+        font-size: 3vw !important;
+    }
+
+    .nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+        font-size: 3vw !important;
+    }
+
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+        background-color: #fefbf2;
+    }
+
+    .bg-transparent {
+        background-color: #fefbf2 !important;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 3vw !important;
     }
 }

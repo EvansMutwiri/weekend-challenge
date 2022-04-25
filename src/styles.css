@@ -8,6 +8,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  padding: 0 !important;
+}
+
 #home {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -29,6 +33,10 @@ nav input {
   border-radius: 0 !important;
 }
 
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+  color: #f6b10b;
+}
+
 .hero-text {
   width: 100vw;
   padding-top: 10%;
@@ -36,8 +44,9 @@ nav input {
 
 .hero-text h1 {
   font-weight: 800;
-  font-size: 4.5rem;
+  font-size: 5vw;
   color: #f6b10b;
+  line-height: 95%;
 }
 
 .btn {
@@ -55,6 +64,10 @@ nav input {
   z-index: 0;
 }
 
+.features .col-12 {
+  height: 350px;
+}
+
 .card {
   margin: auto;
   cursor: pointer;
@@ -66,12 +79,14 @@ nav input {
   color: white;
 }
 
-.card h2 {
+.card h3 {
   font-weight: 600;
 }
 
 .card p {
-  font-size: 18px;
+  font-size: 1.5vw;
+  font-weight: 300;
+  color: #cccccc;
 }
 
 .card img {
@@ -97,6 +112,13 @@ nav input {
   bottom: 4em;
   padding: 2em;
   color: white;
+  overflow: hidden;
+}
+
+#about .bio-img .bio p {
+  font-size: 1.5vw;
+  padding: 0 15%;
+  font-weight: 300;
 }
 
 #about .bio-img .bio h3 {
@@ -109,6 +131,32 @@ nav input {
   margin: auto;
 }
 
+#about .about-description h3 {
+  font-weight: 600;
+  font-size: 2.2vw;
+}
+
+#about .about-description p {
+  font-size: 1.5vw;
+  font-weight: 300;
+}
+
+#about .about-description .about-footer {
+  margin-top: 10%;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+#about .about_part_2 h3 {
+  font-weight: 600;
+  font-size: 2.2vw;
+}
+
+#about .about_part_2 p {
+  font-size: 1.5vw;
+  font-weight: 300;
+}
+
 #about .h-rule {
   margin: auto;
   width: 60%;
@@ -118,20 +166,7 @@ nav input {
 .check-list ul {
   list-style: none;
   padding-left: 0;
-}
-
-.check-list ul li {
-  position: relative;
-  padding-left: 1.5em;
-}
-
-.check-list ul li:before {
-  content: ' ';
-  position: absolute;
-  left: 0;
-  width: 1em;
-  height: 1em;
-  background: url("/src/img/check.svg") no-repeat;
+  font-size: 18px;
 }
 
 .deck {
@@ -143,9 +178,40 @@ nav input {
 }
 
 .deck .cards {
-  background-color: #f6b10b;
+  background: #f6b10b;
   color: white;
   height: 24rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.deck .cards h3 {
+  font-weight: 800;
+}
+
+.deck .cards p {
+  padding: 5%;
+  font-size: 18px;
+}
+
+.deck .mission-card {
+  color: black;
+  background: white;
+}
+
+.bg-basic, .btn_basic {
+  background: #f9de9b;
+}
+
+.bg_light {
+  background: #fefbf2;
 }
 
 .about__banner {
@@ -223,6 +289,20 @@ hr {
   font-weight: 200;
 }
 
+.nav-link {
+  color: black;
+  font-weight: 800;
+  font-size: 1.2vw;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: #f6b10b;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: #f6b10b;
+}
+
 @media all and (max-width: 750px) {
   .hero-text {
     width: 100vw;
@@ -232,6 +312,9 @@ hr {
     font-weight: 800;
     font-size: 3rem;
     color: #f6b10b;
+  }
+  .thumbnail_container .thumbnail_caption {
+    font-size: 3vw !important;
   }
 }
 
@@ -262,11 +345,44 @@ hr {
     font-size: 2rem;
     color: #f6b10b;
   }
+  .thumbnail_container .thumbnail_caption {
+    font-size: 5vw !important;
+  }
   .features {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .card p {
+    font-size: 4vw !important;
+  }
+  #about .bio-img .bio p {
+    font-size: 4vw !important;
+  }
+  #about .about-description h3 {
+    font-size: 4vw !important;
+  }
+  #about .about-description p {
+    font-size: 3vw !important;
+  }
+  #about .about_part_2 h3 {
+    font-size: 4vw !important;
+  }
+  #about .about_part_2 p {
+    font-size: 3vw !important;
+  }
+  .nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+    font-size: 3vw !important;
+  }
+  .navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+    background-color: #fefbf2;
+  }
+  .bg-transparent {
+    background-color: #fefbf2 !important;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 3vw !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

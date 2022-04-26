@@ -1,5 +1,5 @@
 $herotext: #f6b10b;
-$fontSizeP: 1.5vw;
+$fontSizeP: 1.2vw;
 $fontSizeH: 5vw;
 $fontSizeH3: 2.2vw;
 
@@ -12,7 +12,13 @@ body {
     scroll-behavior: smooth;
 }
 
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
     padding: 0 !important;
 }
 
@@ -41,12 +47,14 @@ nav {
 
 .form-control {
     border: none !important;
+
     &:focus {
         border-color: transparent !important;
     }
 }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
     color: $herotext;
 }
 
@@ -78,6 +86,7 @@ nav {
 
 .features {
     z-index: 0;
+
     .col-12 {
         height: 350px;
     }
@@ -87,7 +96,7 @@ nav {
     margin: auto;
     cursor: pointer;
     transition: 0.4s;
-    background: rgba(0, 0, 0, 0.521);
+    background: #23202098;
     height: 300px;
     line-height: 3;
     color: white;
@@ -105,10 +114,20 @@ nav {
     img {
         height: 60px;
     }
+
+    &:hover {
+        transform: scale(0.9, 0.9) !important;
+        cursor: pointer;
+
+    }
 }
 
-.card:hover {
-    transform: scale(0.9, 0.9);
+.building-company_thumbnail {
+    &:hover {
+        transform: scale(0.9, 0.9);
+        transition: transform .4s ease;
+        cursor: pointer;
+    }
 }
 
 #about {
@@ -142,26 +161,30 @@ nav {
     .about-description {
         text-align: center;
         margin: auto;
+
         h3 {
             font-weight: 600;
             font-size: $fontSizeH3;
         }
+
         p {
             font-size: $fontSizeP;
             font-weight: 300;
         }
 
         .about-footer {
-            margin-top: 10%; 
-            padding: 20px; 
+            margin-top: 10%;
+            padding: 20px;
             background-color: #f2f2f2;
         }
     }
+
     .about_part_2 {
         h3 {
             font-weight: 600;
             font-size: $fontSizeH3;
         }
+
         p {
             font-size: $fontSizeP;
             font-weight: 300;
@@ -197,13 +220,16 @@ nav {
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        h3{
+
+        h3 {
             font-weight: 800;
         }
+
         p {
             padding: 5%;
             font-size: 18px;
         }
+
         .card-img {
             &:hover {
                 transform: scale(1.01, 1.01);
@@ -211,13 +237,15 @@ nav {
             }
         }
     }
+
     .mission-card {
         color: black;
         background: white;
     }
 }
 
-.bg-basic, .btn_basic {
+.bg-basic,
+.btn_basic {
     background: #f9de9b;
 }
 
@@ -246,6 +274,7 @@ hr {
     background-position: center;
     background-size: cover;
 }
+
 .building-company {
     height: 98vh;
     width: 100vw;
@@ -255,15 +284,18 @@ hr {
         color: #f2f2f2;
         font-weight: 800;
     }
+
     .company_tag {
         font-size: 1.5rem;
         color: #f2f2f2;
     }
+
     .thumbnail_container {
         background: white;
         margin-top: 1rem;
     }
-    &_thumbnail{
+
+    &_thumbnail {
         border-radius: 50%;
         height: 180px;
         width: 180px;
@@ -278,17 +310,19 @@ hr {
 
     .testimonial {
         // height: 300px; 
-        background: white; 
+        background: white;
         border-radius: 20px;
 
         &_image {
-            height: 80px; 
-            width: 80px; 
+            height: 80px;
+            width: 80px;
             border-radius: 50%;
         }
+
         &_name {
             font-weight: 800;
         }
+
         &_title {
             font-weight: 200;
         }
@@ -301,17 +335,33 @@ hr {
     font-size: 1.2vw;
 }
 
-.nav-link:focus, .nav-link:hover {
+.nav-link:focus,
+.nav-link:hover {
     color: $herotext;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     background-color: $herotext;
 }
 
-@media all and (max-width: 750px) {
-    $fontSizeP: 18px;
-    
+.material-icons {
+    font-size: 15px;
+}
+
+.search-div {
+    border: 1px #f2f2f2 solid;
+    form {
+        border: none;
+    }
+}
+
+.about2 {
+    background: #f2f2f2;
+}
+
+@media all and (max-width: 921px) {
+
     .hero-text {
         width: 100vw;
         padding-top: 30%;
@@ -327,6 +377,76 @@ hr {
         .thumbnail_caption {
             font-size: 3vw !important;
         }
+    }
+
+    .card p {
+        font-size: 2.5vw !important;
+    }
+
+    #about .bio-img .bio p {
+        font-size: 3vw !important;
+    }
+
+    #about .about-description h3 {
+        font-size: 3.5vw !important;
+    }
+
+    #about .about-description p {
+        font-size: 3vw !important;
+    }
+
+    #about .about_part_2 h3 {
+        font-size: 4vw !important;
+        padding: 5%;
+    }
+
+    #about .about_part_2 p {
+        font-size: 2.5vw !important;
+        padding: 6%;
+    }
+
+    .reasons {
+        padding-left: 10%;
+        ul {
+            font-size: 2.5vw;
+        }
+    }
+
+    .person {
+        color: #f6b10b; 
+        font-size: 18px; 
+        font-weight: 600;
+    }
+
+    .numbers {
+        font-size: 80px;
+        color: #f2f2f2;
+        font-weight: 900;
+    }
+
+    .nav-fill .nav-item .nav-link,
+    .nav-justified .nav-item .nav-link {
+        font-size: 1vw !important;
+    }
+
+    .navbar>.container,
+    .navbar>.container-fluid,
+    .navbar>.container-lg,
+    .navbar>.container-md,
+    .navbar>.container-sm,
+    .navbar>.container-xl,
+    .navbar>.container-xxl {
+        background-color: #fefbf2;
+    }
+
+    .bg-transparent {
+        background-color: #fefbf2 !important;
+        padding-left: 20px;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 3vw !important;
+        font-weight: 600;
     }
 }
 
@@ -357,6 +477,7 @@ hr {
             color: $herotext;
         }
     }
+
     .thumbnail_container {
         .thumbnail_caption {
             font-size: 5vw !important;
@@ -393,16 +514,28 @@ hr {
         padding: 6%;
     }
 
-    .nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+    .reasons ul {
+        font-size: 3vw;
+    }
+
+    .nav-fill .nav-item .nav-link,
+    .nav-justified .nav-item .nav-link {
         font-size: 3vw !important;
     }
 
-    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+    .navbar>.container,
+    .navbar>.container-fluid,
+    .navbar>.container-lg,
+    .navbar>.container-md,
+    .navbar>.container-sm,
+    .navbar>.container-xl,
+    .navbar>.container-xxl {
         background-color: #fefbf2;
     }
 
     .bg-transparent {
         background-color: #fefbf2 !important;
+        padding-left: 20px;
     }
 
     .navbar-light .navbar-nav .nav-link {

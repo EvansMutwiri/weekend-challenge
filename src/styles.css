@@ -8,7 +8,13 @@ body {
   scroll-behavior: smooth;
 }
 
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
   padding: 0 !important;
 }
 
@@ -33,7 +39,16 @@ nav input {
   border-radius: 0 !important;
 }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+.form-control {
+  border: none !important;
+}
+
+.form-control:focus {
+  border-color: transparent !important;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
   color: #f6b10b;
 }
 
@@ -73,7 +88,7 @@ nav input {
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  background: rgba(0, 0, 0, 0.521);
+  background: #23202098;
   height: 300px;
   line-height: 3;
   color: white;
@@ -84,7 +99,7 @@ nav input {
 }
 
 .card p {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-weight: 300;
   color: #cccccc;
 }
@@ -94,8 +109,19 @@ nav input {
 }
 
 .card:hover {
+  -webkit-transform: scale(0.9, 0.9) !important;
+          transform: scale(0.9, 0.9) !important;
+  cursor: pointer;
+}
+
+.building-company_thumbnail:hover {
   -webkit-transform: scale(0.9, 0.9);
           transform: scale(0.9, 0.9);
+  -webkit-transition: -webkit-transform .4s ease;
+  transition: -webkit-transform .4s ease;
+  transition: transform .4s ease;
+  transition: transform .4s ease, -webkit-transform .4s ease;
+  cursor: pointer;
 }
 
 #about {
@@ -116,7 +142,7 @@ nav input {
 }
 
 #about .bio-img .bio p {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   padding: 0 15%;
   font-weight: 300;
 }
@@ -137,7 +163,7 @@ nav input {
 }
 
 #about .about-description p {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-weight: 300;
 }
 
@@ -153,7 +179,7 @@ nav input {
 }
 
 #about .about_part_2 p {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-weight: 300;
 }
 
@@ -190,6 +216,7 @@ nav input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .deck .cards h3 {
@@ -201,12 +228,22 @@ nav input {
   font-size: 18px;
 }
 
+.deck .cards .card-img:hover {
+  -webkit-transform: scale(1.01, 1.01);
+          transform: scale(1.01, 1.01);
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
 .deck .mission-card {
   color: black;
   background: white;
 }
 
-.bg-basic, .btn_basic {
+.bg-basic,
+.btn_basic {
   background: #f9de9b;
 }
 
@@ -295,15 +332,33 @@ hr {
   font-size: 1.2vw;
 }
 
-.nav-link:focus, .nav-link:hover {
+.nav-link:focus,
+.nav-link:hover {
   color: #f6b10b;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   background-color: #f6b10b;
 }
 
-@media all and (max-width: 750px) {
+.material-icons {
+  font-size: 15px;
+}
+
+.search-div {
+  border: 1px #f2f2f2 solid;
+}
+
+.search-div form {
+  border: none;
+}
+
+.about2 {
+  background: #f2f2f2;
+}
+
+@media all and (max-width: 921px) {
   .hero-text {
     width: 100vw;
     padding-top: 30%;
@@ -315,6 +370,63 @@ hr {
   }
   .thumbnail_container .thumbnail_caption {
     font-size: 3vw !important;
+  }
+  .card p {
+    font-size: 2.5vw !important;
+  }
+  #about .bio-img .bio p {
+    font-size: 3vw !important;
+  }
+  #about .about-description h3 {
+    font-size: 3.5vw !important;
+  }
+  #about .about-description p {
+    font-size: 3vw !important;
+  }
+  #about .about_part_2 h3 {
+    font-size: 4vw !important;
+    padding: 5%;
+  }
+  #about .about_part_2 p {
+    font-size: 2.5vw !important;
+    padding: 6%;
+  }
+  .reasons {
+    padding-left: 10%;
+  }
+  .reasons ul {
+    font-size: 2.5vw;
+  }
+  .person {
+    color: #f6b10b;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .numbers {
+    font-size: 80px;
+    color: #f2f2f2;
+    font-weight: 900;
+  }
+  .nav-fill .nav-item .nav-link,
+  .nav-justified .nav-item .nav-link {
+    font-size: 1vw !important;
+  }
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar > .container-lg,
+  .navbar > .container-md,
+  .navbar > .container-sm,
+  .navbar > .container-xl,
+  .navbar > .container-xxl {
+    background-color: #fefbf2;
+  }
+  .bg-transparent {
+    background-color: #fefbf2 !important;
+    padding-left: 20px;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 3vw !important;
+    font-weight: 600;
   }
 }
 
@@ -368,18 +480,31 @@ hr {
   }
   #about .about_part_2 h3 {
     font-size: 4vw !important;
+    padding: 5%;
   }
   #about .about_part_2 p {
     font-size: 3vw !important;
+    padding: 6%;
   }
-  .nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+  .reasons ul {
+    font-size: 3vw;
+  }
+  .nav-fill .nav-item .nav-link,
+  .nav-justified .nav-item .nav-link {
     font-size: 3vw !important;
   }
-  .navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar > .container-lg,
+  .navbar > .container-md,
+  .navbar > .container-sm,
+  .navbar > .container-xl,
+  .navbar > .container-xxl {
     background-color: #fefbf2;
   }
   .bg-transparent {
     background-color: #fefbf2 !important;
+    padding-left: 20px;
   }
   .navbar-light .navbar-nav .nav-link {
     font-size: 3vw !important;

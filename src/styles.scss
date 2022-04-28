@@ -3,13 +3,19 @@ $fontSizeP: 1.5vw;
 $fontSizeH: 5vw;
 $fontSizeH3: 2.2vw;
 
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
 *,
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -17,12 +23,14 @@ body {
 }
 
 #home {
-    height: fit-content;
+    // height: fit-content;
     background: url(https://images.pexels.com/photos/2530342/pexels-photo-2530342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2), no-repeat, fixed, center;
     background-size: cover;
 }
 
-nav {
+.main-nav {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     a {
         &:hover {
             color: $herotext !important;
@@ -50,16 +58,21 @@ nav {
     color: $herotext;
 }
 
+// .bg-transparent {
+//     background: transparent !important;
+// }
+
 
 .hero-text {
-    width: 100vw;
+    // width: 100vw;
     padding-top: 10%;
 
     h1 {
-        font-weight: 800;
+        font-weight: 600;
         font-size: $fontSizeH;
         color: $herotext;
         line-height: 95%;
+        font-family: 'Roboto', sans-serif;
     }
 }
 
@@ -84,21 +97,22 @@ nav {
 }
 
 .card {
-    margin: auto;
+    // margin: auto;
     cursor: pointer;
     transition: 0.4s;
     background: rgba(0, 0, 0, 0.521);
-    height: 300px;
-    line-height: 3;
+    // height: 300px;
+    // line-height: 1;
     color: white;
 
-    h3 {
+    .h3-header {
         font-weight: 600;
+        font-size: 18px;
     }
 
     p {
-        font-size: $fontSizeP;
-        font-weight: 300;
+        font-size: 16px;
+        font-weight: 500;
         color: #cccccc;
     }
 
@@ -126,8 +140,12 @@ nav {
             color: white;
             overflow: hidden;
 
+            .bottom {
+                margin-top: 60%;
+            }
+
             p {
-                font-size: $fontSizeP;
+                font-size: 14;
                 padding: 0 15%;
                 font-weight: 300;
             }
@@ -144,11 +162,11 @@ nav {
         margin: auto;
         h3 {
             font-weight: 600;
-            font-size: $fontSizeH3;
+            font-size: 24px;
         }
         p {
-            font-size: $fontSizeP;
-            font-weight: 300;
+            font-size: 14px;
+            font-weight: 400;
         }
 
         .about-footer {
@@ -184,7 +202,7 @@ nav {
 }
 
 .deck {
-    max-width: 1200px;
+    // max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
@@ -198,13 +216,18 @@ nav {
         align-items: center;
         cursor: pointer;
         h3{
-            font-weight: 800;
+            font-weight: 600;
         }
         p {
             padding: 5%;
             font-size: 18px;
         }
         .card-img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
             &:hover {
                 transform: scale(1.01, 1.01);
                 transition: transform .2s ease;
@@ -228,7 +251,7 @@ nav {
 .about__banner {
     // height: 400px;
     text-align: center;
-    width: 100vw;
+    // width: 100vw;
     margin-top: 10%;
     overflow: hidden;
     background: #f2f2f2;
@@ -297,16 +320,30 @@ hr {
 
 .nav-link {
     color: black;
-    font-weight: 800;
-    font-size: 1.2vw;
+    font-weight: 500;
+    // font-size: 1.2vw;
 }
 
+.check-list-h3{
+    font-size: 24px !important;
+}
+.check-list {
+    font-size: 14px !important;
+
+    .tick {
+        color: #f6b10b;
+    }
+}
 .nav-link:focus, .nav-link:hover {
     color: $herotext;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: $herotext;
+}
+
+.about-desc {
+    padding: 10% 15% 4% 15%;
 }
 
 @media all and (max-width: 750px) {
@@ -340,6 +377,9 @@ hr {
     .deck {
         grid-template-columns: repeat(3, 1fr);
     }
+    .nate {
+        height: 80vh;
+    }
 
     .thumbnail_container {
         width: 20vw;
@@ -364,7 +404,7 @@ hr {
     }
 
     .features {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .card p {
@@ -407,5 +447,11 @@ hr {
 
     .navbar-light .navbar-nav .nav-link {
         font-size: 3vw !important;
+    }
+
+    .worker-image {
+        width: 100vw;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }

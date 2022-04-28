@@ -1,4 +1,5 @@
 import './styles.scss';
+// import 'bootstrap';
 
 import skyscraper from './img/trade.png';
 // import factory from './img/factory.png';
